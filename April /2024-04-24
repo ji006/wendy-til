@@ -1,32 +1,18 @@
 ## 날짜: 2024-04-24
 
 ### 스크럼
-- 학습 목표 1 : git, ES6 배우기
+- 학습 목표 1 : [오늘의 스크럼](https://www.notion.so/goorm/2024-04-24-c2409a6075684e5e9411cf7f4bc3adfd)
 
-### 새로 배운 내용
-#### 주제 1: git
+### 새로 공부한 내용
+#### 주제 1: MVC
 - 상세 내용 1
-
-#### 주제 2: ES6
-- 상세 내용 1
+  MVC - Model, View, Controller의 약자
 
 ### 오늘의 도전 과제와 해결 방법
-- 도전 과제 1: github 프로필 업데이트
-  git init
-  git remote add origin "저장소 주소"
-  git add "파일명"
-  git commit -m “git에 올릴 제목”
-  git push -u <원격저장소명> <브랜치명> <- git push -u origin main
-
-- 도전 과제 2: 우당탕탕 시나리오로 PR해보기
-  branch 만들기 => git branch <브랜치명>
-  branch로 이동 => git checkout <브랜치명>
-
-- 도전 과제 3: today i learn 시작
+- 도전 과제 1: 
 
 ### 오늘의 회고
-- git에 대해 잘 모르고 사용하고 있었던 것 같다. commit, push, pull이 어떻게 작동하는지 알 수 있었다.
-- ES6의 개념은 아직 잘 와닫지 않는다. 공부를 조금 더 해야될 것 같다.
+- 
 
 ### 참고 자료 및 링크
 - [링크 제목](URL)
