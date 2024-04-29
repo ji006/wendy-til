@@ -7,16 +7,42 @@
 
 ### 새로 배운 내용
 #### 주제 1: file upload 하는 법!
-- 상세 내용 1
-- 상세 내용 2
+
+-body에 첨부하는 방법
+profile: "data:image/" + profile_ext + ";base64," + btoa(profile_data) //이미지 파일 가져오기
+
+-function은 아래와 같이
+let profile_data;
+let profile_ext;
+function modify_profile(e){
+  const file = URL.createObjectURL(e.files[0]);
+
+  document.querySelector(".profileimg").src = file;
+
+  let fileReader = new FileReader();
+
+  //   fileReader.readAsDataURL(e.files[0]);
+  fileReader.readAsBinaryString(e.files[0]);
+  profile_ext = e.files[0].type.split("/")[1];
+
+  fileReader.onload = (event) => {
+    //   console.log(`path: ${event.target.result}`);  // 업로드된 파일 경로
+    //   image.setAttribute("src", event.target.result); // 파일 경로 지정
+    profile_data = event.target.result;
+  };
+}
 
 #### 주제 2: 원래 쓰던 git이 있었는데 추가로 연결
-- 상세 내용 1
-- 상세 내용 2
+- git remote add upstream 깃주소
+원래 쓰던 git에 다른 git 하나 더 추가 
+- git remote -v
+연결되었는지 확인
+- git add .
+- git commit -m '메시지'
+- git push upstream 브런치명 
 
 ### 오늘의 회고
-- 오늘의 학습 경험에 대한 자유로운 생각이나 느낀 점을 기록합니다.
-- 성공적인 점, 개선해야 할 점, 새롭게 시도하고 싶은 방법 등을 포함할 수 있습니다.
+- 파일 업로드 과정이 어려웠고 서치하면서도 원하는 것이 나오지 않아 힘들었다,,
 
 ### 참고 자료 및 링크
 - [git 연결 관련](https://velog.io/@adguy/git-%EC%97%AC%EB%9F%AC%EA%B0%9C-%EC%9B%90%EA%B2%A9-%EC%A0%80%EC%9E%A5%EC%86%8C-%EC%82%AC%EC%9A%A9%ED%95%B4%EC%84%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%95%9C%EA%B0%9C%EC%97%90-%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0)
